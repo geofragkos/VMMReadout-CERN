@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Chamber configuration file -->
+<chamber id = "0">
+   <name>ExMe</name>
+   <multilayer id = "0">
+      <name>MultiLayer0</name>
+      <!-- Position and rotation are in respect to containing element -->
+      <position> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z>
+      </position>
+      <rotation> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z> 
+      </rotation>
+      
+      <layer id = "0">
+         <name>Layer0</name>
+         <!-- Position and rotation are in respect to containing element -->
+         <position> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+         </position>
+         <rotation> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z> 
+         </rotation>
+         
+         <readout id = "0">
+            <name> X </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>1024</max>
+            </strip_range>
+            <pitch>0.450</pitch>
+         </readout>
+       </layer>
+   </multilayer>
+   
+   <connector id = "0"> <name>C0</name> <map_file>ExMe-chamber-C0-map.txt</map> </connector>
+   <connector id = "1"> <name>C1</name> <map_file>ExMe-chamber-C1-map.txt</map> </connector>
+   <connector id = "2"> <name>C2</name> <map_file>ExMe-chamber-C2-map.txt</map> </connector>
+   <connector id = "3"> <name>C3</name> <map_file>ExMe-chamber-C3-map.txt</map> </connector>
+   <connector id = "4"> <name>C4</name> <map_file>ExMe-chamber-C4-map.txt</map> </connector>
+   <connector id = "5"> <name>C5</name> <map_file>ExMe-chamber-C5-map.txt</map> </connector>
+   <connector id = "6"> <name>C6</name> <map_file>ExMe-chamber-C6-map.txt</map> </connector>
+   <connector id = "7"> <name>C7</name> <map_file>ExMe-chamber-C7-map.txt</map> </connector>
+   
+      
+</chamber>

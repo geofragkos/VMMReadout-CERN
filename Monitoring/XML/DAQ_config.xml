@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ This is the main configuration file
+ a part of mmDAQ configuration
+ generated automatically by mmdaq3
+ -->
+
+<daq_config>
+   <!-- UDP data receiver TODO MULTI option: make mutliple receivers and define accepted remote addresses for each -->
+   <udp_receiver>
+      <ip>10.0.0.3:6006</ip>
+      <!-- <ip>127.0.0.2:9999</ip> -->
+   </udp_receiver>
+
+   <!-- TCP data receiver
+   <tcp_client>
+      <config_file>Dummy-tcp-config.xml</config_file>
+   </tcp_client>
+   -->
+
+   <event_builder>
+      <!-- use only AssembleBySrsTriggerCounter with correct SRS/FEC settings-->
+       <mode>AssembleBySrsTriggerCounter</mode>
+       <!--    <mode>AssembleByDaqEventNumber</mode> -->
+      <!--other AssembleByDaqTimeStamp, AssembleByDaqEventNumber, AssembleBySrsTriggerCounter -->
+   </event_builder>
+
+    <!-- SRS electronics file -->
+    <srs_file>srs.xml</srs_file>
+   
+    <!-- detector configuration file -->
+    <!--<detector_file>detector_RF-T7-T8.xml</detector_file>-->
+    <detector_file>setup.xml</detector_file>
+      
+    <!-- logging and DB connectivity if any-->
+    <mmdaq_log>
+    	<local_file>mmdaq_internal.log</local_file>   <!-- ignore, n/a -->
+    </mmdaq_log>
+   
+    <run_log>
+        <!-- <local_file>/data/2014/lab/mmdaq3.log</local_file>-->
+        <local_file>/home/dateuser/Desktop/MMs_30sept_2014_Testbeam/Config/TestBeam_30_09_2014.log</local_file>
+   </run_log>
+   
+    <!--path to save data files -->
+   <!-- <data_directory>/data/2014/lab/data</data_directory> -->
+    <data_directory>/data/2014/TestBeam_30_09_2014/data</data_directory>
+
+    <config_db>
+    	<!-- n/a could we ask a DB for detector_file and srs_file ?-->
+    </config_db>
+   
+</daq_config>

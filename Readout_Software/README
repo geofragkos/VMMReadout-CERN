@@ -1,0 +1,146 @@
+#
+# README TO SETUP AND RUN VMMDCS DAQ SOFTWARE
+#
+# daniel.joseph.antrim@cern.ch
+# July 2016
+#
+
+-------------------------------------------------------------------------------
+ Installation steps
+-------------------------------------------------------------------------------
+
+Follow these commands below which will install and setup the DAQ software:
+
+$ cd Readout_Software/
+$ source install.sh
+
+This will perform the following steps:
+
+    1) checkout the boost header files and place them in the
+        Readout_Software/include/boost/ directory
+        (using boost 1.60.0)
+    2) build a shared library called libMyLib.so which is needed
+        for linking the executable and allows for storing
+        stl containers (vector<vector<>>) in ROOT
+    3) calls qmake on vmmdcs.pro (which is under Readout_Software/build/)
+
+At which point you should call make to compile the package (be sure to be
+in Readout_Software/build/ to call this correctly) :
+
+$ make 2>&1 |tee compile.log
+
+At which point the vmmdcs executable will be located under Readout_Software/build.
+
+The command to open up the DAQ window (called within Readout_Software/build/):
+    > mac os:
+        ./vmmdcs.app/Contents/MacOS/vmmdcs
+    > linux:
+        ./vmmdcs
+
+The vmmdcs.pro file is set up to point to the include paths / dependencies based
+on whether or not the system is linux or mac (mac being the only other considered
+system other than linux). Currently the linux setup for these paths / deps.
+is the PC used in the CERN June 2016 test beam and is running SLC 6 with gcc 4.7.
+
+-------------------------------------------------------------------------------
+ System requirements
+-------------------------------------------------------------------------------
+
+The following are the tested (and therefore highly recommended)
+system requirements:
+
+    > boost 1.60.0
+    > Qt 5.4.2 (will not work with Qt >= 5.5)
+    > ROOT 5.34 (will not work with ROOT 6)
+    > c++11 abilities (gcc >= 4.7)
+
+-------------------------------------------------------------------------------
+ Getting the correct compiler setup
+-------------------------------------------------------------------------------
+
+If you are on a (CERN) machine running SLC6 and you require the correct gcc
+(4.7 is the tested one) you can obtain this from CERN devtoolset:
+
+http://linux.web.cern.ch/linux/devtoolset/
+
+And the tested one is devtoolset-1.1:
+
+yum install devtoolset-1.1
+
+$ scl enable devtoolset-1.1 bash
+$ gcc --version
+
+Which should tell you that you are running with gcc 4.7.2.
+
+Be sure that when you next open a shell or environment that when you call
+
+$ gcc --version
+
+it still says you are running gcc 4.7.2. If it does not, you may need to
+add to your ~/.bashrc file the following line:
+
+source /opt/rh/devtoolset-2/enable
+
+or at least be sure to call this before compiling this package. 
+
+
+#############################################################
+# below is obsolete
+#############################################################
+
+#Original name of this folder: vmm2dcs_1.1_noMon_qt5
+#
+#Designed with Qt 5.4 and ROOT 5.34/25.
+#
+#---------------------------
+# To compile and run vmmdcs
+#---------------------------
+#
+#First, build the shared library called libMylib.so, needed for linking the executable.
+#
+#> cd include
+#> rootcint -f aDict.cxx -c a.h LinkDef.h
+#> mkdir ../build/objects
+#> g++ -o ../build/objects/libMylib.so aDict.cxx `root-config --cflags --libs` -shared -fPIC
+#
+#Install Qt and use qmake to generate a makefile:
+#
+#> cd ../build
+#> ln -s objects/libMylib.so .
+#> qmake -o Makefile executables.pro 
+#
+#On MacOS, if you installed binaries, you probably will need to specify the architecture.  Use:
+#
+#> qmake -spec macx-g++ -o Makefile executables.pro
+#
+#If qmake/Qt are not correctly added to your PATH, and/or if you compiled from source and are using an unusual installation location, you need to specify some locations, e.g.:
+#
+#> /Users/atlasmcgill/qt-4.8.5/bin/qmake -spec /Users/atlasmcgill/qt-4.8.5/mkspecs/macx-g++ -o Makefile executables.pro
+#
+#Compile:  
+#
+#> make
+#
+#Run:
+#
+#>./vmmdcs
+#
+#---------
+#vmmconfig
+#---------
+#
+#Configuration files can be found in the configs folder. They are XML files.
+#
+#Run:
+#
+#>./vmmconfig ../configs/config.xml
+#
+#-------
+#vmmrun
+#-------
+#
+#Configuration files can be found in the configs folder. They are XML files.
+#
+#Run:
+#
+#>./vmmrun ../configs/config.xml

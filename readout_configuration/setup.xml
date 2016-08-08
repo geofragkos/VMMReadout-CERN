@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<detector name = "TestBench">
+    <!-- dantrim May 9 2016: why does detector have a position? -->
+    <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+    <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+
+    <chamber name = "T6">
+        <!-- config file describes the chamber -->
+        <config_file>T-chamber.xml</config_file>
+        <drift_gap>5.0</dfig_gap> <!-- mm -->
+        <voltage>
+            <drift>300</drift>
+            <mesh>0</mesh>
+            <strips>500</strips>
+        </voltage>
+        <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+        <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+        <!-- Connectors in chamber -->
+            <connector name = "C0"> <chip> <name> VMM2.1.00 </name> </chip> <map_file>vmm2-mini2-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.01 </name> </chip> <map_file>vmm2-mini2-map-C0.txt</map_file> </connector>
+            <!--<connector name = "C0"> <chip> <name> VMM2.1.00 </name> </chip> <map_file>vmm2-mini2-map.txt</map_file> </connector>-->
+            <!--<connector name = "C0"> <chip> <name> VMM2.1.01 </name> </chip> <map_file>vmm2-mini2-map.txt</map_file> </connector>-->
+            <!--<connector name = "C1"> <chip> <name> VMM2.1.01 </name> </chip> <map_file>vmm2-mini2-map.txt</map_file> </connector> -->
+    </chamber>
+    
+</detector>

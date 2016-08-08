@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<srs>
+   <chip>
+      <!-- this should go from here -->
+	   <!-- this should go from here it is not easy to change this file for each run
+      <zero_suppression_threshold>0.8</zero_suppression_threshold>
+      <pedestal_file></pedestal_file> -->
+      
+      <decoder>
+         <common_mode_correction>
+            <enable>true</enable>
+            <signal_detection_factor>10.0</signal_detection_factor>
+         </common_mode_correction>
+      </decoder>
+      <!--  but crosstalk could stay, as property of the system -->
+      <crosstalk_file>apv-crosstalk.map</crosstalk_file>
+   </chip>
+
+    <fec id = "1">
+        <name>FEC1</name>
+        <ip>10.0.0.2</ip>
+        <chip id = "0" type = "chip">  <name> VMM2.1.00 </name> </chip>
+        <chip id = "1" type = "chip">  <name> VMM2.1.01 </name> </chip>
+        <chip id = "2" type = "chip">  <name> VMM2.1.02 </name> </chip>
+        <chip id = "3" type = "chip">  <name> VMM2.1.03 </name> </chip>
+        <chip id = "4" type = "chip">  <name> VMM2.1.04 </name> </chip>
+        <chip id = "5" type = "chip">  <name> VMM2.1.05 </name> </chip>
+        <chip id = "6" type = "chip">  <name> VMM2.1.06 </name> </chip>
+        <chip id = "7" type = "chip">  <name> VMM2.1.07 </name> </chip>
+        <chip id = "8" type = "chip">  <name> VMM2.1.08 </name> </chip>
+        <chip id = "9" type = "chip">  <name> VMM2.1.09 </name> </chip>
+        <chip id = "10" type = "chip"> <name> VMM2.1.10 </name> </chip>
+        <chip id = "11" type = "chip"> <name> VMM2.1.11 </name> </chip>
+        <chip id = "12" type = "chip"> <name> VMM2.1.12 </name> </chip>
+        <chip id = "13" type = "chip"> <name> VMM2.1.13 </name> </chip>
+        <chip id = "14" type = "chip"> <name> VMM2.1.14 </name> </chip>
+        <chip id = "15" type = "chip"> <name> VMM2.1.15 </name> </chip>
+    </fec>
+
+</srs>

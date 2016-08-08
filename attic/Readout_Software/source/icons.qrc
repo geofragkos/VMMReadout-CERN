@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource>
+        <file>../pics/directory.png</file>
+        <file>../pics/logo.png</file>
+    </qresource>
+</RCC>

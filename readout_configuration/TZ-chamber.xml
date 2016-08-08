@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Chamber configuration file -->
+<chamber id = "0">
+   <name>Txx</name>
+   <multilayer id = "0">
+      <name>MultiLayer0</name>
+      <!-- Position and rotation are in respect to containing element -->
+      <position> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z>
+      </position>
+      <rotation> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z> 
+      </rotation>
+      
+      <layer id = "0">
+         <name>Layer0</name>
+         <!-- Position and rotation are in respect to containing element -->
+         <position> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+         </position>
+         <rotation> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z> 
+         </rotation>
+         
+         <readout id = "0">
+            <name> X </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>256</max>
+            </strip_range>
+            <pitch>0.4</pitch>
+         </readout>
+         
+         
+      </layer>
+   </multilayer>
+   
+   <connector id = "0">
+      <name>C0</name>
+      <!-- Consistency: check strip_range on referenced readouts-->
+      <map_file>T-chamber-C0-map.txt</map>
+   </connector>
+   
+   <connector id = "1">
+      <name>C1</name>
+      <map_file>T-chamber-C1-map.txt</map>
+   </connector>
+      
+</chamber>

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../configs/thresholds_qt.txt</file>
+        <file>../configs/boardCalibConstants_qt.txt</file>
+    </qresource>
+</RCC>

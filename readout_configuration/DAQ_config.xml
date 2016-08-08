@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<daq_config>
+    <!-- SRS electroncis file -->
+    <srs_file>srs_mmfe8.xml</srs_file>
+
+    <!-- detector configuration -->
+    <detector_file>setup_mmfe8.xml</detector_file>
+
+</daq_config>

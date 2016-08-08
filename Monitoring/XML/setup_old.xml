@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	This is the configuration file of the detector,
+	list of chambers and connections to electronics.
+	A part of mmDAQ configuration
+	generated automatically by mmdaq3
+	-->
+
+<detector name = "TestBeam_setup_down">
+   <comment> Dummy detector comment</comment>
+   <position> <x>0.0</x> <y>0.0</y> <z>10.0</z> </position>
+   <rotation> <x>0.0</x> <y>0.0</y> <z> 0.0</z> </rotation>
+
+     <chamber name = "Tmm2">
+       <!-- config file describes chamber type-->
+       <config_file>Tmm-chamber.xml</config_file>
+       <drift_gap> 5.0 </drift_gap>
+       <voltage>  <drift> 300</drift> <mesh> 0</mesh> <strips> 500</strips> </voltage>
+       <position> <x>0.0</x> <y>0.0</y> <z> 0.0</z> </position> <!-- in mm -->
+       <rotation> <x>0.0</x> <y>0.0</y> <z> 0.0</z> </rotation> <!-- in deg-->
+       <!-- Connectors in chamber, repeat for each chip plugged -->
+		<connector name = "C1"> <chip> <name>APV.1.00</name> </chip> <map_file>apv-map.txt</map_file> </connector>
+		<connector name = "C4"> <chip> <name>APV.1.02</name> </chip> <map_file>apv-map.txt</map_file> </connector>
+     </chamber>
+
+     <chamber name = "Tmm3">
+       <!-- config file describes chamber type-->
+       <config_file>Tmm-chamber.xml</config_file>
+       <drift_gap> 5.0 </drift_gap>
+       <voltage>  <drift> 300</drift> <mesh> 0</mesh> <strips> 500</strips> </voltage>
+       <position> <x>0.0</x> <y>0.0</y> <z> 0.0</z> </position> <!-- in mm -->
+       <rotation> <x>0.0</x> <y>0.0</y> <z> 0.0</z> </rotation> <!-- in deg-->
+       <!-- Connectors in chamber, repeat for each chip plugged -->
+		<connector name = "C1"> <chip> <name>APV.1.01</name> </chip> <map_file>apv-map.txt</map_file> </connector>
+		<connector name = "C4"> <chip> <name>APV.1.03</name> </chip> <map_file>apv-map.txt</map_file> </connector>
+     </chamber>
+    
+    	
+    <chamber name = "T6">
+        <!-- config file describes the chamber -->
+        <config_file>T-chamber.xml</config_file>
+        <drift_gap>5.0</dfig_gap> <!-- mm -->
+        <voltage>
+            <drift>300</drift>
+            <mesh>0</mesh>
+            <strips>500</strips>
+        </voltage>
+        <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+        <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+        <!-- Connectors in chamber -->
+                    <connector name = "C0"> <chip> <name> VMM2.1.00 </name> </chip> <map_file>vmm2-mini2-map.txt</map_file> </connector>
+           <!--  <connector name = "C0"> <chip> <name> APV.3.04 </name> </chip> <map_file>apv-map.txt</map_file> </connector>-->
+            <!--<connector name = "C1"> <chip> <name> VMM2.1.01 </name> </chip> <map_file>vmm2-mini2-map.txt</map_file> </connector> -->
+    </chamber>	
+					    
+</detector>						    
+	

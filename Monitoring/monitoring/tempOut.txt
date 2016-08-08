@@ -1,0 +1,493 @@
+clang++ -g -c -m64 -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I/home/agathangelos/Documents/root/include -I/usr/lib/x86_64-linux-gnu/* -I. -I. -o DisplayDrawer.o DisplayDrawer.cpp
+DisplayDrawer.cpp:71:36: error: invalid operands to binary expression ('basic_ostream<char, std::char_traits<char> >' and 'QVector<std::pair<QString, QVector<int> > >')
+    std::cout << "mem_rawData -->" << mem_rawData << "\nmem_stripData-->" << mem_stripData << "\nmem_eventNumber-->" << mem_eventNumber << "\n";
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:245:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const void *' for 1st argument; take the address of the argument with &
+      operator<<(const void* __p)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:108:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to '__ostream_type &(*)(__ostream_type &)' for 1st argument
+      operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:117:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to '__ios_type &(*)(__ios_type &)' for 1st argument
+      operator<<(__ios_type& (*__pf)(__ios_type&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:127:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+      operator<<(ios_base& (*__pf) (ios_base&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:166:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'long' for 1st argument
+      operator<<(long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:170:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'unsigned long' for 1st argument
+      operator<<(unsigned long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:174:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'bool' for 1st argument
+      operator<<(bool __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:178:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'short' for 1st argument
+      operator<<(short __n);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:181:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'unsigned short' for 1st argument
+      operator<<(unsigned short __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:189:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'int' for 1st argument
+      operator<<(int __n);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:192:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'unsigned int' for 1st argument
+      operator<<(unsigned int __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:201:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'long long' for 1st argument
+      operator<<(long long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:205:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'unsigned long long' for 1st argument
+      operator<<(unsigned long long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:220:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'double' for 1st argument
+      operator<<(double __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:224:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'float' for 1st argument
+      operator<<(float __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:232:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'long double' for 1st argument
+      operator<<(long double __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:270:7: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to '__streambuf_type *' (aka 'basic_streambuf<char, std::char_traits<char> > *') for 1st argument
+      operator<<(__streambuf_type* __sb);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:476:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'char' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:482:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:488:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'signed char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:493:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'unsigned char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:530:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:543:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const signed char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:548:5: note: candidate function [with _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const unsigned char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/ostream.tcc:321:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:76:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::_Resetiosflags' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:106:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::_Setiosflags' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:140:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::_Setbase' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:205:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::_Setprecision' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:235:5: note: candidate function [with _CharT = char, _Traits = std::char_traits<char>] not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'std::_Setw' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+    ^
+/usr/include/qt4/QtCore/qdatastream.h:312:14: note: candidate function [with T = std::pair<QString, QVector<int> >] not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+QDataStream& operator<<(QDataStream& s, const QVector<T>& v)
+             ^
+/home/agathangelos/Documents/root/include/TString.h:439:11: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const TString' for 2nd argument
+ostream  &operator<<(ostream &str, const TString &s);
+          ^
+/home/agathangelos/Documents/root/include/TBits.h:191:17: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const TBits' for 2nd argument
+inline ostream &operator<<(ostream& os, const TBits& rhs)
+                ^
+/usr/include/qt4/QtCore/qdebug.h:178:15: note: candidate function [with T = std::pair<QString, QVector<int> >] not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+inline QDebug operator<<(QDebug debug, const QVector<T> &vec)
+              ^
+./SrsChip.h:210:18: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const online::display::CSrsChip' for 2nd argument
+   std::ostream& operator<< (std::ostream& out, const CSrsChip& chip);
+                 ^
+./DetStripId.h:50:21: note: candidate function not viable: no known conversion from 'QVector<std::pair<QString, QVector<int> > >' to 'const online::display::CDetStripId' for 2nd argument
+      std::ostream& operator<< (std::ostream & out, const CDetStripId & sid);
+                    ^
+/usr/include/qt4/QtCore/qchar.h:400:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QChar &);
+                           ^
+/usr/include/qt4/QtCore/qbytearray.h:597:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QByteArray &);
+                           ^
+/usr/include/qt4/QtCore/qstring.h:1080:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QString &);
+                           ^
+/usr/include/qt4/QtCore/qobject.h:407:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QObject *);
+                     ^
+/usr/include/qt4/QtCore/qmargins.h:140:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QMargins &);
+                     ^
+/usr/include/qt4/QtCore/qsize.h:102:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QSize &);
+                           ^
+/usr/include/qt4/QtCore/qsize.h:198:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QSize &);
+                     ^
+/usr/include/qt4/QtCore/qsize.h:255:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QSizeF &);
+                           ^
+/usr/include/qt4/QtCore/qsize.h:361:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QSizeF &);
+                     ^
+/usr/include/qt4/QtCore/qpoint.h:111:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QPoint &);
+                           ^
+/usr/include/qt4/QtCore/qpoint.h:207:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QPoint &);
+                     ^
+/usr/include/qt4/QtCore/qpoint.h:263:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QPointF &);
+                           ^
+/usr/include/qt4/QtCore/qpoint.h:382:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug d, const QPointF &p);
+                     ^
+/usr/include/qt4/QtCore/qrect.h:199:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QRect &);
+                           ^
+/usr/include/qt4/QtCore/qrect.h:507:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QRect &);
+                     ^
+/usr/include/qt4/QtCore/qrect.h:621:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QRectF &);
+                           ^
+/usr/include/qt4/QtCore/qrect.h:851:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QRectF &);
+                     ^
+/usr/include/qt4/QtCore/qiodevice.h:247:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug debug, QIODevice::OpenMode modes);
+                     ^
+/usr/include/qt4/QtCore/qregexp.h:159:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &out, const QRegExp &regExp);
+                           ^
+/usr/include/qt4/QtCore/qstringlist.h:252:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+inline QDataStream &operator<<(QDataStream &out, const QStringList &list)
+                    ^
+/usr/include/qt4/QtGui/qcolor.h:60:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QColor &);
+                    ^
+/usr/include/qt4/QtGui/qcolor.h:63:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QColor &);
+                          ^
+/usr/include/qt4/QtGui/qpolygon.h:102:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QPolygon &);
+                    ^
+/usr/include/qt4/QtGui/qpolygon.h:109:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &stream, const QPolygon &polygon);
+                          ^
+/usr/include/qt4/QtGui/qpolygon.h:168:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QPolygonF &);
+                    ^
+/usr/include/qt4/QtGui/qpolygon.h:175:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &stream, const QPolygonF &array);
+                          ^
+/usr/include/qt4/QtGui/qregion.h:227:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QRegion &);
+                          ^
+/usr/include/qt4/QtGui/qregion.h:232:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QRegion &);
+                    ^
+/usr/include/qt4/QtCore/qline.h:201:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug d, const QLine &p);
+                     ^
+/usr/include/qt4/QtCore/qline.h:205:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QLine &);
+                           ^
+/usr/include/qt4/QtCore/qline.h:412:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug d, const QLineF &p);
+                     ^
+/usr/include/qt4/QtCore/qline.h:416:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QLineF &);
+                           ^
+/usr/include/qt4/QtGui/qmatrix.h:188:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QMatrix &);
+                          ^
+/usr/include/qt4/QtGui/qmatrix.h:193:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QMatrix &);
+                    ^
+/usr/include/qt4/QtGui/qpainterpath.h:260:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QPainterPath &);
+                          ^
+/usr/include/qt4/QtGui/qpainterpath.h:428:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QPainterPath &);
+                    ^
+/usr/include/qt4/QtGui/qtransform.h:355:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QTransform &);
+                          ^
+/usr/include/qt4/QtGui/qtransform.h:360:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QTransform &);
+                    ^
+/usr/include/qt4/QtGui/qimage.h:362:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QImage &);
+                          ^
+/usr/include/qt4/QtGui/qpixmap.h:323:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QPixmap &);
+                          ^
+/usr/include/qt4/QtGui/qbrush.h:166:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QBrush &);
+                          ^
+/usr/include/qt4/QtGui/qbrush.h:171:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QBrush &);
+                    ^
+/usr/include/qt4/QtGui/qpalette.h:262:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &ds, const QPalette &p);
+                          ^
+/usr/include/qt4/QtGui/qfont.h:370:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QFont &);
+                          ^
+/usr/include/qt4/QtGui/qfont.h:375:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QFont &);
+                    ^
+/usr/include/qt4/QtGui/qsizepolicy.h:225:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QSizePolicy &);
+                          ^
+/usr/include/qt4/QtGui/qcursor.h:171:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &outS, const QCursor &cursor);
+                          ^
+/usr/include/qt4/QtGui/qkeysequence.h:61:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &in, const QKeySequence &ks);
+                          ^
+/usr/include/qt4/QtGui/qkeysequence.h:222:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QKeySequence &);
+                    ^
+/usr/include/qt4/QtGui/qicon.h:150:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &, const QIcon &);
+                          ^
+/home/agathangelos/Documents/root/include/TBuffer.h:344:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Bool_t b)   { buf.WriteBool(b);   return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:345:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Char_t c)   { buf.WriteChar(c);   return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:346:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UChar_t c)  { buf.WriteUChar(c);  return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:347:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Short_t s)  { buf.WriteShort(s);  return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:348:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UShort_t s) { buf.WriteUShort(s); return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:349:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Int_t i)    { buf.WriteInt(i);    return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:350:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UInt_t i)   { buf.WriteUInt(i);   return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:351:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Long_t l)   { buf.WriteLong(l);   return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:352:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, ULong_t l)  { buf.WriteULong(l);  return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:353:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Long64_t l) { buf.WriteLong64(l); return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:354:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, ULong64_t l){ buf.WriteULong64(l);return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:355:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Float_t f)  { buf.WriteFloat(f);  return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:356:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Double_t d) { buf.WriteDouble(d); return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:357:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const Char_t *c)  { buf.WriteCharP(c);  return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:358:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TString &s) { buf.WriteTString(s);return buf; }
+                ^
+/home/agathangelos/Documents/root/include/TBuffer.h:398:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TObject *obj)
+                ^
+/home/agathangelos/Documents/root/include/TArray.h:77:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &b, const TArray *obj);
+         ^
+/home/agathangelos/Documents/root/include/TArrayD.h:75:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayD *obj)
+                ^
+/home/agathangelos/Documents/root/include/TArrayC.h:74:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayC *obj)
+                ^
+/home/agathangelos/Documents/root/include/TArrayS.h:74:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayS *obj)
+                ^
+/home/agathangelos/Documents/root/include/TArrayI.h:75:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayI *obj)
+                ^
+/home/agathangelos/Documents/root/include/TArrayF.h:74:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayF *obj)
+                ^
+/usr/include/qt4/QtCore/qvariant.h:532:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream& operator<< (QDataStream& s, const QVariant& p);
+                           ^
+/usr/include/qt4/QtCore/qvariant.h:534:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream& operator<< (QDataStream& s, const QVariant::Type p);
+                           ^
+/usr/include/qt4/QtCore/qvariant.h:606:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QVariant &);
+                     ^
+/usr/include/qt4/QtCore/qvariant.h:607:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QVariant::Type);
+                     ^
+/usr/include/qt4/QtCore/qabstractitemmodel.h:102:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QModelIndex &);
+                     ^
+/usr/include/qt4/QtCore/qabstractitemmodel.h:148:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug, const QPersistentModelIndex &);
+                     ^
+/usr/include/qt4/QtGui/qitemselectionmodel.h:246:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug, const QItemSelectionRange &);
+                    ^
+/usr/include/qt4/QtCore/qlocale.h:837:28: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QLocale &);
+                           ^
+/usr/include/qt4/QtGui/qstyle.h:882:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug debug, QStyle::State state);
+                    ^
+/usr/include/qt4/QtGui/qstyleoption.h:962:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug debug, const QStyleOption::OptionType &optionType);
+                    ^
+/usr/include/qt4/QtGui/qstyleoption.h:963:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_GUI_EXPORT QDebug operator<<(QDebug debug, const QStyleOption &option);
+                    ^
+/usr/include/qt4/QtGui/qtreewidget.h:254:27: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDataStream &' for 1st argument
+Q_GUI_EXPORT QDataStream &operator<<(QDataStream &out, const QTreeWidgetItem &item);
+                          ^
+/usr/include/qt4/QtCore/qdir.h:263:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug debug, QDir::Filters filters);
+                     ^
+/usr/include/qt4/QtCore/qdir.h:264:22: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QDebug' for 1st argument
+Q_CORE_EXPORT QDebug operator<<(QDebug debug, const QDir &dir);
+                     ^
+/usr/include/qt4/QtCore/qtextstream.h:291:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QTextStream &' for 1st argument
+inline QTextStream &operator<<(QTextStream &s, QTextStreamFunction f)
+                    ^
+/usr/include/qt4/QtCore/qtextstream.h:294:21: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'QTextStream &' for 1st argument
+inline QTextStream &operator<<(QTextStream &s, QTextStreamManipulator m)
+                    ^
+/home/agathangelos/Documents/root/include/TUUID.h:97:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &buf, const TUUID &uuid);
+         ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:471:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'QVector<std::pair<QString, QVector<int> > >')
+    operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2753:5: note: candidate template ignored: could not match 'basic_string' against 'QVector'
+    operator<<(basic_ostream<_CharT, _Traits>& __os,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/ostream:513:5: note: candidate template ignored: could not match 'const _CharT *' against 'QVector<std::pair<QString, QVector<int> > >'
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bitset:1521:5: note: candidate template ignored: could not match 'bitset' against 'QVector'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/complex:524:5: note: candidate template ignored: could not match 'complex' against 'QVector'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/iomanip:175:5: note: candidate template ignored: could not match '_Setfill' against 'QVector'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+    ^
+/usr/include/qt4/QtCore/qdatastream.h:261:14: note: candidate template ignored: could not match 'QList' against 'QVector'
+QDataStream& operator<<(QDataStream& s, const QList<T>& l)
+             ^
+/usr/include/qt4/QtCore/qdatastream.h:287:14: note: candidate template ignored: could not match 'QLinkedList' against 'QVector'
+QDataStream& operator<<(QDataStream& s, const QLinkedList<T>& l)
+             ^
+/usr/include/qt4/QtCore/qdatastream.h:337:14: note: candidate template ignored: could not match 'QSet' against 'QVector'
+QDataStream& operator<<(QDataStream &out, const QSet<T> &set)
+             ^
+/usr/include/qt4/QtCore/qdatastream.h:376:35: note: candidate template ignored: could not match 'QHash' against 'QVector'
+Q_OUTOFLINE_TEMPLATE QDataStream &operator<<(QDataStream &out, const QHash<Key, T>& hash)
+                                  ^
+/usr/include/qt4/QtCore/qdatastream.h:422:35: note: candidate template ignored: could not match 'QMap' against 'QVector'
+Q_OUTOFLINE_TEMPLATE QDataStream &operator<<(QDataStream &out, const QMap<Key, T> &map)
+                                  ^
+/usr/include/qt4/QtCore/qpair.h:116:21: note: candidate template ignored: could not match 'QPair' against 'QVector'
+inline QDataStream& operator<<(QDataStream& s, const QPair<T1, T2>& p)
+                    ^
+/home/agathangelos/Documents/root/include/TBuffer.h:383:32: note: candidate template ignored: could not match 'const Tmpl *' against 'QVector<std::pair<QString, QVector<int> > >'
+template <class Tmpl> TBuffer &operator<<(TBuffer &buf, const Tmpl *obj)
+                               ^
+/usr/include/qt4/QtCore/qdebug.h:160:15: note: candidate template ignored: could not match 'QList' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QList<T> &list)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:190:15: note: candidate template ignored: could not match 'QMap' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QMap<aKey, aT> &map)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:207:15: note: candidate template ignored: could not match 'QHash' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QHash<aKey, aT> &hash)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:223:15: note: candidate template ignored: could not match 'QPair' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QPair<T1, T2> &pair)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:231:15: note: candidate template ignored: could not match 'QSet' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QSet<T> &set)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:242:15: note: candidate template ignored: could not match 'QContiguousCache' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QContiguousCache<T> &cache)
+              ^
+/usr/include/qt4/QtCore/qdebug.h:260:15: note: candidate template ignored: could not match 'QFlags' against 'QVector'
+inline QDebug operator<<(QDebug debug, const QFlags<T> &flags)
+              ^
+DisplayDrawer.cpp:102:41: warning: unused parameter 'tabIndex' [-Wunused-parameter]
+void DisplayDrawer::changeActiveTab(int tabIndex)
+                                        ^
+DisplayDrawer.cpp:160:29: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+    for(int iLine = 0; iLine<mem_stripData.size(); iLine++)
+                       ~~~~~^~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:296:30: warning: equality comparison result unused [-Wunused-comparison]
+        processedEventNumber == atoi(eventNumstr.c_str());
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:296:30: note: use '=' to turn this equality comparison into an assignment
+        processedEventNumber == atoi(eventNumstr.c_str());
+                             ^~
+                             =
+DisplayDrawer.cpp:198:17: warning: unused variable 'currentChipId' [-Wunused-variable]
+    CSrsChipId *currentChipId;
+                ^
+DisplayDrawer.cpp:328:26: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+        for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+                        ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:359:40: warning: unused parameter 'fecNumber' [-Wunused-parameter]
+void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
+                                       ^
+DisplayDrawer.cpp:359:55: warning: unused parameter 'chipNumber' [-Wunused-parameter]
+void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
+                                                      ^
+DisplayDrawer.cpp:359:71: warning: unused parameter 'channelNumber' [-Wunused-parameter]
+void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
+                                                                      ^
+DisplayDrawer.cpp:359:92: warning: unused parameter 'charge' [-Wunused-parameter]
+void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
+                                                                                           ^
+DisplayDrawer.cpp:359:106: warning: unused parameter 'time' [-Wunused-parameter]
+void DisplayDrawer::fillChipHistos(int fecNumber, int chipNumber, int channelNumber, float charge, float time)
+                                                                                                         ^
+DisplayDrawer.cpp:387:50: warning: unused parameter 'chipName' [-Wunused-parameter]
+TH2D *DisplayDrawer::fillChip2dHisto(std::string chipName, std::string histoType)
+                                                 ^
+DisplayDrawer.cpp:387:72: warning: unused parameter 'histoType' [-Wunused-parameter]
+TH2D *DisplayDrawer::fillChip2dHisto(std::string chipName, std::string histoType)
+                                                                       ^
+DisplayDrawer.cpp:445:22: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+                    ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:476:22: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+                    ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:588:22: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+                    ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DisplayDrawer.cpp:609:22: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+    for(size_t i=0; i<monitoringMainWindow->chamberTree->childCount(); ++i)
+                    ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+16 warnings and 1 error generated.
+make: *** [DisplayDrawer.o] Error 1

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<srs>
+
+    <fec id = "1">
+        <name>MMFE81</name>
+        <ip>192.168.0.2</ip>
+        <chip id = "1" type = "chip">  <name> VMM2.1.1 </name> </chip>
+        <chip id = "2" type = "chip">  <name> VMM2.1.2 </name> </chip>
+        <chip id = "3" type = "chip">  <name> VMM2.1.3 </name> </chip>
+        <chip id = "4" type = "chip">  <name> VMM2.1.4 </name> </chip>
+        <chip id = "5" type = "chip">  <name> VMM2.1.5 </name> </chip>
+        <chip id = "6" type = "chip">  <name> VMM2.1.6 </name> </chip>
+        <chip id = "7" type = "chip">  <name> VMM2.1.7 </name> </chip>
+        <chip id = "8" type = "chip">  <name> VMM2.1.8 </name> </chip>
+    </fec>
+    <fec id = "2">
+        <name>MMFE82</name>
+        <ip>192.168.0.3</ip>
+        <chip id = "1" type = "chip">  <name> VMM2.2.1 </name> </chip>
+        <chip id = "2" type = "chip">  <name> VMM2.2.2 </name> </chip>
+        <chip id = "3" type = "chip">  <name> VMM2.2.3 </name> </chip>
+        <chip id = "4" type = "chip">  <name> VMM2.2.4 </name> </chip>
+        <chip id = "5" type = "chip">  <name> VMM2.2.5 </name> </chip>
+        <chip id = "6" type = "chip">  <name> VMM2.2.6 </name> </chip>
+        <chip id = "7" type = "chip">  <name> VMM2.2.7 </name> </chip>
+        <chip id = "8" type = "chip">  <name> VMM2.2.8 </name> </chip>
+    </fec>
+
+</srs>

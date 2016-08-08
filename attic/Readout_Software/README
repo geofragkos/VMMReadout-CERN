@@ -1,0 +1,56 @@
+Original name of this folder: vmm2dcs_1.1_noMon_qt5
+
+Designed with Qt 5.4 and ROOT 5.34/25.
+
+---------------------------
+ To compile and run vmmdcs
+---------------------------
+
+First, build the shared library called libMylib.so, needed for linking the executable.
+
+> cd include
+> rootcint -f aDict.cxx -c a.h LinkDef.h
+> mkdir ../build/objects
+> g++ -o ../build/objects/libMylib.so aDict.cxx `root-config --cflags --libs` -shared -fPIC
+
+Install Qt and use qmake to generate a makefile:
+
+> cd ../build
+> ln -s objects/libMylib.so .
+> qmake -o Makefile executables.pro 
+
+On MacOS, if you installed binaries, you probably will need to specify the architecture.  Use:
+
+> qmake -spec macx-g++ -o Makefile executables.pro
+
+If qmake/Qt are not correctly added to your PATH, and/or if you compiled from source and are using an unusual installation location, you need to specify some locations, e.g.:
+
+> /Users/atlasmcgill/qt-4.8.5/bin/qmake -spec /Users/atlasmcgill/qt-4.8.5/mkspecs/macx-g++ -o Makefile executables.pro
+
+Compile:  
+
+> make
+
+Run:
+
+>./vmmdcs
+
+---------
+vmmconfig
+---------
+
+Configuration files can be found in the configs folder. They are XML files.
+
+Run:
+
+>./vmmconfig ../configs/config.xml
+
+-------
+vmmrun
+-------
+
+Configuration files can be found in the configs folder. They are XML files.
+
+Run:
+
+>./vmmrun ../configs/config.xml

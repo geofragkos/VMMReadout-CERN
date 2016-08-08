@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    configuration of the DAQ elx and data parsing
+-->
+
+<daq_config>
+
+    <!-- daq configuration -->
+    <general.config>
+        <use.chan.map>false</use.chan.map>
+        <ignore16>false</ignore16>
+    </general.config>
+
+    <!-- trigger settings -->
+    <trigger.daq>
+        <tp.delay>81</tp.delay>
+        <trigger.period>3FFFE</trigger.period>
+        <acq.sync>100</acq.sync>
+        <acq.window>4096</acq.window>
+        <run.mode>pulser</run.mode>
+        <run.count>20</run.count>
+    </trigger.daq>
+
+    <!-- electronics file -->
+    <elx_file>/Users/dantrim/workarea/NSW/VMMReadout/Readout_Software/configs/mini2_map.txt</elx_file>
+
+    <!-- path to save data files -->
+    <data_directory>/Users/dantrim/workarea/NSW/VMMReadout/Readout_Software/output</data_directory>
+
+</daq_config>

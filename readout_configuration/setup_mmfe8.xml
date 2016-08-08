@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<detector name = "MMFE8">
+    <!-- dantrim May 9 2016: why does detector have a position? -->
+    <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+    <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+
+    <chamber name = "TZ6">
+        <!-- config file describes the chamber -->
+        <config_file>TZ-chamber.xml</config_file>
+        <drift_gap>5.0</drift_gap> <!-- mm -->
+        <voltage>
+            <drift>300</drift>
+            <mesh>0</mesh>
+            <strips>500</strips>
+        </voltage>
+        <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+        <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+        <!-- Connectors in chamber -->
+            <connector name = "C0"> <chip> <name> VMM2.1.1 </name> </chip> <map_file>vmm2-1-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.2 </name> </chip> <map_file>vmm2-2-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.3 </name> </chip> <map_file>vmm2-3-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.4 </name> </chip> <map_file>vmm2-4-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.5 </name> </chip> <map_file>vmm2-5-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.6 </name> </chip> <map_file>vmm2-6-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.7 </name> </chip> <map_file>vmm2-7-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.1.8 </name> </chip> <map_file>vmm2-8-mmfe8-map-C0.txt</map_file> </connector>
+    </chamber>
+    <chamber name = "TZ7">
+        <!-- config file describes the chamber -->
+        <config_file>TZ-chamber.xml</config_file>
+        <drift_gap>5.0</drift_gap> <!-- mm -->
+        <voltage>
+            <drift>300</drift>
+            <mesh>0</mesh>
+            <strips>500</strips>
+        </voltage>
+        <position> <x>0.0</x> <y>0.0</y> <z>0.0</z> </position>
+        <rotation> <x>0.0</x> <y>0.0</y> <z>0.0</z> </rotation>
+        <!-- Connectors in chamber -->
+            <connector name = "C0"> <chip> <name> VMM2.2.1 </name> </chip> <map_file>vmm2-1-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.2 </name> </chip> <map_file>vmm2-2-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.3 </name> </chip> <map_file>vmm2-3-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.4 </name> </chip> <map_file>vmm2-4-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.5 </name> </chip> <map_file>vmm2-5-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.6 </name> </chip> <map_file>vmm2-6-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.7 </name> </chip> <map_file>vmm2-7-mmfe8-map-C0.txt</map_file> </connector>
+            <connector name = "C0"> <chip> <name> VMM2.2.8 </name> </chip> <map_file>vmm2-8-mmfe8-map-C0.txt</map_file> </connector>
+    </chamber>
+    
+</detector>

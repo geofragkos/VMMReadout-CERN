@@ -1,0 +1,167 @@
+Description of the configuration file format for "vmmconfig".
+
+The config file format that was chosen is the XML format, which is a structured text file using tags of various depth.
+
+The file is divided into sections using header tags. Two sections (general.info and global.settings) hold general information. One section (channel.map) holds information contained originally in the Channels part of the main vmmdcs panel. A section (trigger.daq) is present as a placeholder for an eventual DAQ control parameters section. The other 64 sections hold the settings for each of the 64 channels of the VMM chip.  There is a series of mandatory items in each section, described below.
+
+Items in each section are listed as one item per line, in the form:
+<item.name>value</item.name>
+
+Values can be strings or numbers (ints, floats, etc) and are entered in the same way as simple text.
+_________________________________
+I-UDP Setup
+
+The <udp.setup> section is used to set the requested ports for the UDP communication in vmmconfig and vmmrun. It has the following mandatory fields:
+
+fec.port: The FEC port number, used to bind the general purpose socket and receive replies.
+
+daq.port: The DAQ port number, used to bind the socket for data streaming.
+
+vmmasic.port: The VMMASIC port number.
+
+vmmapp.port: The VMMAPP port number, used to send the configuration and trigger hex words.
+
+s6.port: The s6 port number.
+
+_________________________________
+II-General info
+
+The <general.info> section has the following mandatory fields:
+
+config.version:  the version number of this configuration file, for bookkeeping.
+
+vmm.id:  a unique identifier for the VMM chip this configuration file applies to. To give more than 1 VMM identifier, list them separated by ",".  
+
+ip: the ip address of the VMM chip to send the configuration info to.  To give more than 1 ip address, list them separated by ",".  There must be an IP address for each vmm id and vice-versa.  The list of ip addresses is assumed to be in the same order as the list of vmm identifiers.
+
+
+The General.Info section also has optional fields:
+
+comment:  Holds user comments/notes on this configuration file.  IMPORTANT: Start and end with a double quote " " to ensure that the wwhole comment is treated as one long string 
+
+debug: set to "on" to turn on debug messages, "off" to suppress.  If debug field is not listed in the config file, debug messages are off by default.
+
+__________________________________
+III-Trigger DAQ settings
+
+The <trigger.daq> section contains Trigger DAQ parameters, currently held in vmmdcs. It has the following mandatory fields:
+
+tp.decay: 
+
+trigger.period: 
+
+acq.sync: 
+
+acq.window: 
+
+run.mode: Type of run to be taken.  Allowed values are pulser and external. Note that the pulser is not active in external mode.
+
+run.count: For a pulser run, number of pulses to send during the duration of the run.  Run will end after these pulses have been sent.  For an externally triggered run, duration of the run in seconds, no pulses are sent in external mode.
+
+output.path: output directory full or relative path (optional, needed to write output to disk)
+
+output.filename: name of the output raw data file (optional, needed to write output to disk)
+
+__________________________________
+IV-Channel Map 
+
+The <channel.map> section holds the values needed to create the channel map, an essential part of the configuration hex word. It is composed of 8 sub-sections, called <hdmi.X>, where X=1..8. Each sub-section contains the three following fields:
+
+switch: used to switch on or off the usage of the two following fields. Corresponds to hdmiX in vmmdcs.
+
+first: corresponds to hdmiX_1 in vmmdcs.
+
+second: corresponds to hdmiX_2 in vmmdcs. 
+
+__________________________________
+V-Global settings
+
+The <global.settings> section holds the settings of all the global registers of the VMM.  All items in <global.settings> are mandatory:
+
+ch.polarity: global flag to change channel polarities. (see polarity in the channels section for more details) [spg]
+
+ch.leakage.current: global flag to enable leakage current generator (see leakage.current in the channels section for more details) [slg]
+
+analog.tristates: on/off tristates analog outputs with token, used in analog mode [sdrv]
+
+double.leakage: on/off to double the leakage current [sfm]
+
+gain: gain setting of the VMM in mV/fC, allowed values: 0.5, 1.0, 3.0, 4.5, 6.0, 9.0, 12.0, 16.0 [sg]
+
+peak.time: peak time setting in ns, allowed values: 25, 50, 100, 200 [st]
+
+neighbor.trigger: on/off to turn the neighbor trigger function on or off [sng]
+
+TAC.slop.adj:  TAC slope adjustment value in ns, allowed values are 125, 250, 500 and 1000 [stc]
+
+disable.at.peak: on/off, turn on to enable disable-at-peak [sdp]
+
+ART: on/off, turn on to enable ART [sfa]
+
+ART.mode:  select ART mode, allowed values are "threshold" and "peak" for timing-at-threshold and timing-at-peak, respectively [sfam]
+
+dual.clock.ART: on/off dual clock edge serialized ART enable [sdcka]
+
+out.buffer.mo: on/off, turn on to enable analog monitoring output [sbfm]
+
+out.buffer.pdo: on/off, turn on to enable analog pdo output [sbfp]
+
+out.buffer.tdo: on/off, turn on to enable analog tdp output [sbft]
+
+channel.monitoring: set number of monitoring channel, allowed values are integers between 0 and 63. See monitoring.control item below for more info. [sm]
+
+monitoring.control: on/off, set "on" to monitor individual channel, and pick which channel in the channel.monitoring item, set "off" to monitor global registers and select appropriate value of channel.monitoring (1 for pulser DAC voltage before gain, 2 for global/coarse threshold DAC, 3 for band gap reference, 4 for temperature) [scmx]
+
+monitor.pdo.out: on/off to route analog monitor to pdo output [sbmx]
+
+ADCs: on/off turn on to enable ADCs [spdc]
+
+sub.hyst.discr: on/off, turn on to enable sub-hysteresis discrimination [ssh]
+
+direct.time: on/off, turn on to enable timing outputs [sttt]
+
+direct.time.mode: set the timing output mode, allowed values are TtP, ToT, PtP and PtT, for threshold-to-peak, time-over-threshold, pulse-at-peak and peak-to-threshold, respectively [stpp, stot]
+
+conv.mode.8bit: turn on/off to enable/disable the 8-bit ADC conversion mode [s8b]
+
+enable.6bit: turn on/off to enable/disable the 6-bit ADC (enabling this will disable the 8-bit and 10-bit ADCs) [s6b]
+
+ADC.10bit: 10-bit ADC conversion time, allowed values are 200ns and +60ns. [sc010b]
+
+ADC.8bit: 8-bit ADC conversion time, allowed values are 100ns and +60ns. [sc08b]
+
+ADC.6bit: 6-bit ADC conversion time, allowed values are low, middle and up. [sc06b]
+
+dual.clock.data: on/off turn on to enable dual clock edge serialized data [sdcks]
+
+dual.clock.6bit: on/off turn on to enable dual clock edge serialized 6‐bit [sdck6b]
+
+threshold.DAC: set global/coarse DAC threshold voltage, allowed values are integers between 0 and 1023 [sdt]
+
+test.pulse.DAC: set height of the test pulse voltage, allowed values are integers between 0 and 1023 [sdp]
+
+_______________________________
+VI-Channel sections
+
+The configuration must hold 64 separate channel sections that are labeled <channel.XX> where XX is a 2-digit channel number, running from 00 to 63.  Each Channel section contains 10 items, all mandatory:
+
+polarity:  set to "strips" (positive) or "wires" (negative) depending on which detector readout type is used [sp]
+
+capacitance: on/off, large sensor capacitance mode (off for <30pF, on for >30pF) [sc]
+
+leakage.current: enabled/disabled, use to enable leakage generator [sl]
+
+test.pulse:  on/off to send test pulses to this channel with the pulser. [st]
+
+hidden.mode: on/off to set the readout to hidden mode [sm]
+
+trim:  set to an integer value between 0 and 15, to activate threshold trim at this value for this channel. The value is subtracted from the global threshold DAC. [sd0-sd3]
+
+monitor.mode: on/off, turn on to allow monitoring of trimmed threshold in this channel, leave off to monitor analog output [smx]
+
+s10bADC.time.set: Time setting for the 10-bit ADC zero. Values range between 0 and 31 ns. [sz010b-sz410b]
+
+s08bADC.time.set: Time setting for the 8-bit ADC zero. Values range between 0 and 15 ns. [sz08b-sz38b]
+
+s06bADC.time.set: Time setting for the 6-bit ADC zero. Values range between 0 and 7 ns. [sz06b-sz26b]
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Chamber configuration file -->
+<chamber id = "0">
+   <name>Txx</name>
+   <multilayer id = "0">
+      <name>MultiLayer0</name>
+      <!-- Position and rotation are in respect to containing element -->
+      <position> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z>
+      </position>
+      <rotation> 
+         <x>0.0</x>
+         <y>0.0</y>
+         <z>0.0</z> 
+      </rotation>
+      
+      <layer id = "0">
+         <name>Layer0</name>
+         <!-- Position and rotation are in respect to containing element -->
+         <position> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+         </position>
+         <rotation> 
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z> 
+         </rotation>
+         
+         <readout id = "0">
+            <name> 1 </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>1024</max>
+            </strip_range>
+            <pitch>0.415</pitch>
+         </readout>
+         <readout id = "1">
+            <name> 2 </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>1024</max>
+            </strip_range>
+            <pitch>0.415</pitch>
+         </readout>
+         <readout id = "2">
+            <name> 3 </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>1024</max>
+            </strip_range>
+            <pitch>0.415</pitch>
+         </readout>
+         <readout id = "3">
+            <name> 4 </name>
+            <!-- Position and rotation are in respect to containing element -->
+            <position> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z>
+            </position>
+            <rotation> 
+               <x>0.0</x>
+               <y>0.0</y>
+               <z>0.0</z> 
+            </rotation>
+            <strip_range> 
+               <min>1</min>
+               <max>1024</max>
+            </strip_range>
+            <pitch>0.415</pitch>
+         </readout>	 
+      </layer>
+   </multilayer>
+   
+   <connector id = "0"> <name>L0_C0</name> <map_file>MMSW-chamber-L0-0-map.txt</map> </connector>
+   <connector id = "1"> <name>L0_C1</name> <map_file>MMSW-chamber-L0-1-map.txt</map> </connector>
+   <connector id = "2"> <name>L0_C2</name> <map_file>MMSW-chamber-L0-2-map.txt</map> </connector>
+   <connector id = "3"> <name>L0_C3</name> <map_file>MMSW-chamber-L0-3-map.txt</map> </connector>
+   <connector id = "4"> <name>L0_C4</name> <map_file>MMSW-chamber-L0-4-map.txt</map> </connector>
+   <connector id = "5"> <name>L0_C5</name> <map_file>MMSW-chamber-L0-5-map.txt</map> </connector>
+   <connector id = "6"> <name>L0_C6</name> <map_file>MMSW-chamber-L0-6-map.txt</map> </connector>
+   <connector id = "7"> <name>L0_C7</name> <map_file>MMSW-chamber-L0-7-map.txt</map> </connector>
+   
+   <connector id = "8">  <name>L1_C0</name> <map_file>MMSW-chamber-L1-0-map.txt</map> </connector>
+   <connector id = "9">  <name>L1_C1</name> <map_file>MMSW-chamber-L1-1-map.txt</map> </connector>
+   <connector id = "10"> <name>L1_C2</name> <map_file>MMSW-chamber-L1-2-map.txt</map> </connector>
+   <connector id = "11"> <name>L1_C3</name> <map_file>MMSW-chamber-L1-3-map.txt</map> </connector>
+   <connector id = "12"> <name>L1_C4</name> <map_file>MMSW-chamber-L1-4-map.txt</map> </connector>
+   <connector id = "13"> <name>L1_C5</name> <map_file>MMSW-chamber-L1-5-map.txt</map> </connector>
+   <connector id = "14"> <name>L1_C6</name> <map_file>MMSW-chamber-L1-6-map.txt</map> </connector>
+   <connector id = "15"> <name>L1_C7</name> <map_file>MMSW-chamber-L1-7-map.txt</map> </connector>
+ 
+   <connector id = "16"> <name>L2_C0</name> <map_file>MMSW-chamber-L2-0-map.txt</map> </connector>
+   <connector id = "17"> <name>L2_C1</name> <map_file>MMSW-chamber-L2-1-map.txt</map> </connector>
+   <connector id = "18"> <name>L2_C2</name> <map_file>MMSW-chamber-L2-2-map.txt</map> </connector>
+   <connector id = "19"> <name>L2_C3</name> <map_file>MMSW-chamber-L2-3-map.txt</map> </connector>
+   <connector id = "20"> <name>L2_C4</name> <map_file>MMSW-chamber-L2-4-map.txt</map> </connector>
+   <connector id = "21"> <name>L2_C5</name> <map_file>MMSW-chamber-L2-5-map.txt</map> </connector>
+   <connector id = "22"> <name>L2_C6</name> <map_file>MMSW-chamber-L2-6-map.txt</map> </connector>
+   <connector id = "23"> <name>L2_C7</name> <map_file>MMSW-chamber-L2-7-map.txt</map> </connector>
+
+   <connector id = "24"> <name>L3_C0</name> <map_file>MMSW-chamber-L3-0-map.txt</map> </connector>
+   <connector id = "25"> <name>L3_C1</name> <map_file>MMSW-chamber-L3-1-map.txt</map> </connector>
+   <connector id = "26"> <name>L3_C2</name> <map_file>MMSW-chamber-L3-2-map.txt</map> </connector>
+   <connector id = "27"> <name>L3_C3</name> <map_file>MMSW-chamber-L3-3-map.txt</map> </connector>
+   <connector id = "28"> <name>L3_C4</name> <map_file>MMSW-chamber-L3-4-map.txt</map> </connector>
+   <connector id = "29"> <name>L3_C5</name> <map_file>MMSW-chamber-L3-5-map.txt</map> </connector>
+   <connector id = "30"> <name>L3_C6</name> <map_file>MMSW-chamber-L3-6-map.txt</map> </connector>
+   <connector id = "31"> <name>L3_C7</name> <map_file>MMSW-chamber-L3-7-map.txt</map> </connector>
+     
+</chamber>
